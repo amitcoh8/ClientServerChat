@@ -1,15 +1,23 @@
+Client Server Chat App
+----------------------
+GitHub Link: https://github.com/amitcoh8/ClientServerChat
+
 Instructions:
 
 A) Run the server
 B) Run one or more clients
 
+*If you are running the files from their .EXE versions and not the .PY version, the booting up proccess 
+takes a couple of seconds*
+
 Client registration:
 --------------------
 When running a client, there are two options to set the username:
 1. If there is a configuration file named Config.config, the program will read the username from the file
-2. Otherwise, the user will be asked to insert his/her name: "Please register your username:"
+  (if you use this method, please make sure you dont have two clients (or more) trying to load the same username)
+2. Otherwise, you will be asked to insert your name: "Please register your username:"
 
-After the client has connected to the server, the user will get a message: "Registered successfully!"
+After the client has connected to the server, you will get a message: "Registered successfully!"
 
 Sending a message:
 ------------------
@@ -34,7 +42,7 @@ Yossi
 Registered successfully!
 Aviv Stav
 Hi Aviv, Stav, How are you? Are we meeting today ?
-Aviv: Hi Yossi yes, see you at 8?
+(17:35) Aviv: Hi Yossi yes, see you at 8?
 
 
 

@@ -38,7 +38,7 @@ class ServerCommunication:
             file = Input.Read.username_from_file("CONFIG.config")
             if file:
                 username = file
-                print(Messages.welcome())
+                print(Messages.welcome(username))
             else:
                 print(Messages.register())
                 username = Input.Read.keyboard()
@@ -148,19 +148,19 @@ class Parse:
     class ClientToServer:
 
         def _time():
-            return datetime.datetime.now()
+            return datetime.datetime.now().strftime("%H:%M:%S")
 
         @classmethod
         def to_register_command(cls,username):
             now = cls._time()
             """ Gets a client-to-server message. Retruns it formatted to register command. """
-            return f"r - {now.hour}:{now.minute} ^ {username}"
+            return f"r - {now} ^ {username}"
 
         @classmethod
         def to_send_command(cls,username, clients_list, message):
             """ Gets a client-to-server message. Retruns it formatted to message command.  """
             now = cls._time()
-            return f"m - {now.hour}:{now.minute} ^ {username} $ {clients_list} * {message}"
+            return f"m - {now} ^ {username} $ {clients_list} * {message}"
 
     class ServerToClient:
 
